@@ -19,13 +19,14 @@ const Index = () => {
         <Text color={'#faae2b'} fontWeight={'bold'}>
           Hello there
         </Text>
-        <Heading fontSize={'8xl'} textAlign="left">
+        <Heading fontSize={'8xl'} textAlign="left" color="#00473e">
           I'm
           <br />
           David
         </Heading>
         <Text
           fontSize={'xl'}
+          color="#475d5b"
           textAlign={'justify'}
           lineHeight={{ base: '200%', md: '250%' }}
         >

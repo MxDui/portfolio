@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Grid, Heading, Text } from '@chakra-ui/react';
 
+import ProjectCard from '@/components/ProjectCard';
 import { Meta } from '@/layout/Meta';
 import { Main } from '@/templates/Main';
 
@@ -15,8 +16,24 @@ const projects = () => {
         />
       }
     >
-      <Box height={'90vh'}>
-        <Heading>Projects</Heading>
+      <Box height={'auto'}>
+        <Text color={'#faae2b'} fontWeight={'bold'}>
+          My
+        </Text>
+        <Heading color="#00473e" fontSize={'6xl'}>
+          Projects
+        </Heading>
+        <Grid
+          gap={10}
+          mt={5}
+          gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
+        >
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </Grid>
       </Box>
     </Main>
   );
