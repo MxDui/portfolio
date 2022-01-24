@@ -28,11 +28,36 @@ const projects = () => {
           mt={5}
           gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
         >
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard
+            id="dilocus"
+            title="DiLocus"
+            description="A mobile app to make crud requests"
+            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          />
+          <ProjectCard
+            id="localis"
+            title="Localis"
+            description={''}
+            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          />
+          <ProjectCard
+            id="culiacan"
+            title="Culiacan"
+            description={''}
+            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          />
+          <ProjectCard
+            id="dilocus"
+            title="DiLocus"
+            description="A mobile app to make crud requests"
+            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          />
+          <ProjectCard
+            id="dilocus"
+            title="DiLocus"
+            description="A mobile app to make crud requests"
+            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          />
         </Grid>
       </Box>
     </Main>

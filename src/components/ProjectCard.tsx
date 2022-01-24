@@ -2,8 +2,16 @@ import React from 'react';
 
 import { Box, Image, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import NextLink from 'next/link';
 
-const ProjectCard = () => {
+interface ProjectProps {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const ProjectCard = ({ id, title, description, image }: ProjectProps) => {
   return (
     <motion.div
       whileHover={{
@@ -15,22 +23,24 @@ const ProjectCard = () => {
         },
       }}
     >
-      <Box backgroundColor="#faae2b" borderRadius="8px" height="20em">
-        <Image
-          src="https://i.ytimg.com/an_webp/hYs5QUNEu90/mqdefault_6s.webp?du=3000&sqp=CITrjY8G&rs=AOn4CLDun8DpV1RbQPUFq-nCvPMoDWNM0Q"
-          alt="Image of my project"
-          width="100%"
-          height="14em"
-          borderRadius="8px"
-          objectFit="cover"
-        ></Image>
-        <Box p={3}>
-          <Heading size="md" color="#475d5b" fontWeight="extrabold">
-            Title
-          </Heading>
-          <Text>Description</Text>
+      <NextLink href={`/projects/${id}`}>
+        <Box textAlign="center" borderRadius="8px" height="20em">
+          <Image
+            src={image}
+            alt="Image of my project"
+            width="100%"
+            height="14em"
+            borderRadius="8px"
+            objectFit="cover"
+          ></Image>
+          <Box p={3}>
+            <Heading size="md" color="#475d5b" fontWeight="extrabold">
+              {title}
+            </Heading>
+            <Text>{description}</Text>
+          </Box>
         </Box>
-      </Box>
+      </NextLink>
     </motion.div>
   );
 };
