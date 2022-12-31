@@ -11,7 +11,7 @@ const projects = () => {
     <Main
       meta={
         <Meta
-          title="Next.js Boilerplate Presentation"
+          title="MxDui"
           description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
         />
       }
@@ -29,34 +29,40 @@ const projects = () => {
           gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
         >
           <ProjectCard
-            id="dilocus"
-            title="DiLocus"
-            description="A mobile app to make crud requests"
-            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            id="gis"
+            title="Mining GIS"
+            description={
+              'Created a GIS for a mining company in order to keep track of their legal permits and their mining operations.'
+            }
+            image="
+              /assets/images/gis_mx.png
+            "
           />
           <ProjectCard
-            id="localis"
-            title="Localis"
-            description={''}
-            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            id="almazan"
+            title="GEO CRM"
+            description={
+              'Developed a CRM for a real estate company in order to keep track of their clients and their properties.'
+            }
+            image="/assets/images/gis_alma.png"
           />
+
           <ProjectCard
-            id="culiacan"
-            title="Culiacan"
-            description={''}
-            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            id="gis_tool"
+            title="GIS Tooling and Automation Platform"
+            description={
+              'Built a GIS tooling and automation platform for a consulting company in order to automate their GIS and administrative tasks.'
+            }
+            image="/assets/images/gis_ogo.png"
           />
+
           <ProjectCard
-            id="dilocus"
-            title="DiLocus"
-            description="A mobile app to make crud requests"
-            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-          />
-          <ProjectCard
-            id="dilocus"
-            title="DiLocus"
-            description="A mobile app to make crud requests"
-            image="https://images.unsplash.com/photo-1561198379-7ef247721ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9ja3VwfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            id="dof-scaper"
+            title="DOF Scraper"
+            description={
+              'Built a scraper for the DOF (Federal Official Gazette) in order to keep track of the updates of the Mexican laws related to one topic in particular.'
+            }
+            image="/assets/images/gis_dof.png"
           />
         </Grid>
       </Box>

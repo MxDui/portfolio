@@ -15,7 +15,7 @@ const ProjectCard = ({ id, title, description, image }: ProjectProps) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.1,
+        scale: 1.04,
         boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
         borderRadius: '8px',
         transition: {
@@ -24,20 +24,36 @@ const ProjectCard = ({ id, title, description, image }: ProjectProps) => {
       }}
     >
       <NextLink href={`/projects/${id}`}>
-        <Box textAlign="center" borderRadius="8px" height="20em">
+        <Box
+          textAlign="center"
+          borderRadius="8px"
+          height="23em"
+          border={'1px solid #475d5b '}
+        >
           <Image
             src={image}
             alt="Image of my project"
             width="100%"
             height="14em"
-            borderRadius="8px"
-            objectFit="cover"
+            borderTopRadius={'8px'}
+            objectFit="contain"
+            backgroundColor={'#475d5b'}
+            // blur background image
+            filter={'blur(2px)'}
           ></Image>
           <Box p={3}>
-            <Heading size="md" color="#475d5b" fontWeight="extrabold">
+            <Heading
+              size="md"
+              color="#475d5b"
+              fontWeight="extrabold"
+              textAlign={'start'}
+              mb={2}
+            >
               {title}
             </Heading>
-            <Text>{description}</Text>
+            <Text textAlign={'justify'} fontSize={'sm'}>
+              {description}
+            </Text>
           </Box>
         </Box>
       </NextLink>

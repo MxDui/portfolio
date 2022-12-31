@@ -1,5 +1,5 @@
 export const AppConfig = {
-  site_name: 'Starter',
+  site_name: 'David Rivera Morales',
   title: 'David Rivera Morales',
   locale: 'en',
 };

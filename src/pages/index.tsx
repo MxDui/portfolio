@@ -10,7 +10,7 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="Next.js Boilerplate Presentation"
+          title="MxDui"
           description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
         />
       }
@@ -22,7 +22,7 @@ const Index = () => {
         <Heading fontSize={'8xl'} textAlign="left" color="#00473e">
           I'm
           <br />
-          David
+          MxDui
         </Heading>
         <Text
           fontSize={'xl'}
@@ -30,9 +30,9 @@ const Index = () => {
           textAlign={'justify'}
           lineHeight={{ base: '200%', md: '250%' }}
         >
-          Currently I am a high school student and freelance software developer
-          interested on web3 and blockchain. My main focus is on building full
-          stack web applications with Typescript , React , Postgres , NestJS and
+          Currently I am a CS student at UNAM and freelance software developer
+          interested on web3 and AI. My main focus is on building full stack web
+          applications using Typescript , React , Postgres , Django/NodeJS and
           occasionally mobile apps with Flutter. Most of my previous projects
           are related on developing GIS applications so I am also profficient
           with libraries like Leaflet and Postgis.
