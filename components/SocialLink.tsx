@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement } from "react";
 
-import { Button, Text } from '@chakra-ui/react';
-import Link from 'next/link';
+import { Button, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 const SocialLink = (props: {
   link: string;
@@ -13,16 +13,16 @@ const SocialLink = (props: {
     <Link href={props.link} passHref={true}>
       <Button
         bg="tomato"
-        w={{ base: '4em', md: '10em' }}
+        w={{ base: "4em", md: "10em" }}
         p={4}
         backgroundColor={props.btnColor}
-        display={'flex'}
-        alignItems={'center'}
-        color={'#f2f7f5'}
-        borderRadius={'8px'}
+        display={"flex"}
+        alignItems={"center"}
+        color={"#f2f7f5"}
+        borderRadius={"8px"}
       >
         {props.logo}
-        <Text ml={2} display={{ base: 'none', md: 'block' }}>
+        <Text ml={2} display={{ base: "none", md: "block" }}>
           {props.socialName}
         </Text>
       </Button>

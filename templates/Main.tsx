@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -11,12 +11,12 @@ import {
   Link,
   Stack,
   useDisclosure,
-} from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-import NextLink from 'next/link';
-import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import NextLink from "next/link";
+import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub } from "react-icons/io";
 
-import SocialLink from '@/components/SocialLink';
+import SocialLink from "../components/SocialLink";
 
 type IMainProps = {
   meta: ReactNode;
@@ -27,9 +27,9 @@ const NavLink = ({ children, link }: { children: ReactNode; link: string }) => (
   <NextLink href={link}>
     <Link
       py={1}
-      rounded={'md'}
+      rounded={"md"}
       _hover={{
-        textDecoration: 'none',
+        textDecoration: "none",
       }}
     >
       {children}
@@ -46,44 +46,40 @@ const Main = (props: IMainProps) => {
   };
 
   return (
-    <Box display={'flex'} justifyContent={'center'} bg={'#f2f7f5'}>
-      <Box px={4} w={'container.md'}>
+    <Box display={"flex"} justifyContent={"center"} bg={"#f2f7f5"}>
+      <Box px={4} w={{ base: "container.sm", md: "container.xl" }}>
         {props.meta}
 
         <Flex
           h={16}
-          alignItems={'center'}
-          flexDirection={'row'}
-          justifyContent={'space-between'}
+          alignItems={"center"}
+          flexDirection={"row"}
+          justifyContent={"space-between"}
         >
-          <NextLink href={'/'}>
-            <Link
-              _hover={{
-                textDecoration: 'none',
-              }}
-            >
-              <Heading fontSize={'xl'} color={'#faae2b'}>
-                mxdui
-              </Heading>
-            </Link>
+          <NextLink href="/" passHref={true}>
+            <Heading fontSize={"xl"} color={"#faae2b"}>
+              mxdui
+            </Heading>
           </NextLink>
-          <HStack spacing={8} alignItems={'center'} color={'#475d5b'}>
+          <HStack spacing={8} alignItems={"center"} color={"#475d5b"}>
             <IconButton
-              size={'md'}
+              size={"md"}
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={'Open Menu'}
-              display={{ md: 'none' }}
+              aria-label={"Open Menu"}
+              display={{ md: "none" }}
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack
-              as={'nav'}
+              as={"nav"}
               spacing={4}
-              display={{ base: 'none', md: 'flex' }}
+              display={{ base: "none", md: "flex" }}
             >
-              <NavLink link="/projects">Projects</NavLink>
+              <NextLink href="/projects" passHref={true}>
+                Projects
+              </NextLink>
               <a href="https://medium.com/">Blog</a>
               <a href="mailto:mxduibot@gmail.com">
-                <Button backgroundColor={'#faae2b'} color={'#00473e'}>
+                <Button backgroundColor={"#faae2b"} color={"#00473e"}>
                   Contact me
                 </Button>
               </a>
@@ -92,12 +88,12 @@ const Main = (props: IMainProps) => {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={4}>
               <NavLink link="/projects">Projects</NavLink>
               <a href="https://medium.com/">Blog</a>
               <a href="mailto:mxduibot@gmail.com">
-                <Button backgroundColor={'#faae2b'} color={'#00473e'}>
+                <Button backgroundColor={"#faae2b"} color={"#00473e"}>
                   Contact me
                 </Button>
               </a>
@@ -109,13 +105,18 @@ const Main = (props: IMainProps) => {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: 'linear', duration: 1 }}
+          transition={{ type: "linear", duration: 1 }}
         >
-          <Box p={4} height={'auto'}>
+          <Box p={4} height={"auto"}>
             {props.children}
           </Box>
         </motion.div>
-        <div className="border-t border-gray-300 flex py-5 justify-around	 ">
+        <Box
+          borderTop={"1px solid #475d5b"}
+          display={"flex"}
+          justifyContent={"space-between"}
+          py={4}
+        >
           <SocialLink
             link="https://twitter.com/mxduibot"
             socialName="Twitter"
@@ -135,7 +136,7 @@ const Main = (props: IMainProps) => {
             logo={<IoLogoLinkedin />}
             btnColor="#2867B2"
           />
-        </div>
+        </Box>
       </Box>
     </Box>
   );

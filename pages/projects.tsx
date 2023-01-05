@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Box, Grid, Heading, Text } from '@chakra-ui/react';
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 
-import ProjectCard from '@/components/ProjectCard';
-import { Meta } from '@/layout/Meta';
-import { Main } from '@/templates/Main';
+import ProjectCard from "../components/ProjectCard";
+import { Meta } from "../layouts/Meta";
+import { Main } from "../templates/Main";
 
 const projects = () => {
   return (
@@ -16,23 +16,23 @@ const projects = () => {
         />
       }
     >
-      <Box height={'auto'}>
-        <Text color={'#faae2b'} fontWeight={'bold'}>
+      <Box height={"auto"}>
+        <Text color={"#faae2b"} fontWeight={"bold"}>
           My
         </Text>
-        <Heading color="#00473e" fontSize={'6xl'}>
+        <Heading color="#00473e" fontSize={"6xl"}>
           Projects
         </Heading>
         <Grid
           gap={10}
           mt={5}
-          gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
+          gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
         >
           <ProjectCard
             id="gis"
             title="Mining GIS"
             description={
-              'Created a GIS for a mining company in order to keep track of their legal permits and their mining operations.'
+              "Created a GIS for a mining company in order to keep track of their legal permits and their mining operations."
             }
             image="
               /assets/images/gis_mx.png
@@ -42,7 +42,7 @@ const projects = () => {
             id="almazan"
             title="GEO CRM"
             description={
-              'Developed a CRM for a real estate company in order to keep track of their clients and their properties.'
+              "Developed a CRM for a real estate company in order to keep track of their clients and their properties."
             }
             image="/assets/images/gis_alma.png"
           />
@@ -51,7 +51,7 @@ const projects = () => {
             id="gis_tool"
             title="GIS Tooling and Automation Platform"
             description={
-              'Built a GIS tooling and automation platform for a consulting company in order to automate their GIS and administrative tasks.'
+              "Built a GIS tooling and automation platform for a consulting company in order to automate their GIS and administrative tasks."
             }
             image="/assets/images/gis_ogo.png"
           />
@@ -60,7 +60,7 @@ const projects = () => {
             id="dof-scaper"
             title="DOF Scraper"
             description={
-              'Built a scraper for the DOF (Federal Official Gazette) in order to keep track of the updates of the Mexican laws related to one topic in particular.'
+              "Built a scraper for the DOF (Federal Official Gazette) in order to keep track of the updates of the Mexican laws related to one topic in particular."
             }
             image="/assets/images/gis_dof.png"
           />
